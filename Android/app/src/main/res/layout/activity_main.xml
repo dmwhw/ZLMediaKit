@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/surfaceview"
+
+        android:id="@+id/ll"
+        android:orientation="horizontal">
+        <!--        android:text=""-->
+        <EditText
+            android:id="@+id/rtsp"
+            android:layout_width="300dp"
+
+            android:layout_height="wrap_content"
+
+
+            android:text="rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4"></EditText>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始"></Button>
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/mediacode_only"
+        android:layout_below="@id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="new"></Button>
+    <Button
+        android:id="@+id/btn_startDown"
+        android:layout_below="@id/ll"
+        android:layout_toRightOf="@id/mediacode_only"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OpenIndown"></Button>
+
+
+
+    <SurfaceView
+        android:id="@+id/surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="240dp" />
+
+    <com.zlmediakit.demo.opengl.MyGLSurfaceView
+        android:id="@+id/videoRenderView"
+        android:layout_width="match_parent"
+
+        android:layout_height="260dp"
+        android:layout_below="@id/mediacode_only"
+        android:layout_marginTop="1dp"
+        ></com.zlmediakit.demo.opengl.MyGLSurfaceView>
+
+</RelativeLayout>
